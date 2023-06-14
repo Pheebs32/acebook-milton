@@ -1,13 +1,24 @@
-<!DOCTYPE html>
 <html>
+
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
+
   <body>
-    <form action='/sessions?_method=DELETE' method='POST'>
-      <input type="submit" value="Log Out">
+    {{#if }}
+
+    <form action="/">
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out" />
+      </form>
     </form>
+
+    {{else}}
+
     {{{body}}}
+    
   </body>
 </html>
+
+{{!-- Use if statements to state if user is on a certain page, have the Cancel button and if user is signed in in have the Logout button --}}
