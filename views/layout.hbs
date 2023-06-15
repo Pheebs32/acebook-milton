@@ -14,7 +14,7 @@
         {{#if isAuthenticated}}
        
         <li><a href="/posts">Posts</a></li>
-        <li><a href="/profile">Profile</a></li>
+        <li><a href='/users/{{user.email}}'>Profile</a></li>
        
         <form action="/">
           <form action="/sessions?_method=DELETE" method="POST">
