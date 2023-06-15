@@ -1,29 +1,9 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
-  username: {
-    type: String, 
-    required: true
-    // required: () => {
-    //   return this.username != "";
-    // },
-  },
-  email: { 
-    type: String, 
-    required: true,
-    // required: () => {
-    //   return this.email != "";
-    // },
-    unique: true,
-    lowercase: true
-  },
-  password: { 
-    type: String, 
-    required: true 
-    // required: () => {
-    //   return this.password != ""
-    // },
-  },
+  username: {type: String, required: true},
+  email: { type: String, required: true },
+  password: { type: String, required: true },
   posts: [
     {
       content: String,
@@ -38,5 +18,6 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
+
 
 // need to add username to the schema
