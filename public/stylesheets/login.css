@@ -13,12 +13,20 @@ body {
   height: 100%;
   width: 100%;
   place-items: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     -225deg,
     rgb(183, 248, 219) 0%,
     rgb(80, 167, 194) 100%
-  );
+  ); */
+  background-image: linear-gradient(
+    rgba(183, 248, 219, 0.52),
+    rgba(80, 167, 194, 0.73)
+  ),
+  url("/images/login-pic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
+
 }
 
 ::selection {
