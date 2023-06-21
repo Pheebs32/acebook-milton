@@ -21,13 +21,10 @@ describe("Timeline", () => {
 
     //cy.get("#new-post-form").find('[type="text"]').type("");
     cy.get("#new-post-form").submit();
-    // check for error message, NOTE: this checks the entire page and as such will fail if this text is anywhere on the page. Potential area for refactoring
-    //cy.contains('post must be populated');
-    // tempory test to assert still on new post page
-    // Assert that the error message is displayed
-    cy.on('window:alert',(t)=>{
-    //assertions
-    expect(t).to.contains('post cannot be blank');
 
-      });
+    // Assert that the error message is displayed
+ 
+    cy.contains('The post cannot be left blank');
+
+  });
 });
