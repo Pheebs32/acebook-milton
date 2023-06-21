@@ -23,14 +23,13 @@ describe("Timeline", () => {
     cy.get("#new-post-form").find('[type="text"]').type("Test1");
     cy.get("#new-post-form").submit();
 
-    cy.get(".posts").should("contain", "Test1");
-
     //got to profile page
     cy.visit("/users/User1")
-    cy.get("#submit-edit-button").click;
-    cy.get("#content").find('[type="text"]').type("Test 2");
-
-    cy.get(".posts").should("contain", "Test 2");
+    cy.contains("Edit").click();
+    cy.contains("Test1").click().type(" Edited");
+    cy.contains("Save").click();
+    cy.visit("/posts");
+    cy.contains("Test1 Edited");
 
   });
 });
