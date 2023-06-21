@@ -53,6 +53,10 @@ body {
   );
 }
 
+.wrapper .title a {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 .wrapper form {
