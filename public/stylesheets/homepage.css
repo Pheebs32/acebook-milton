@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-.hero-section {
+.main-section {
   height: 100vh;
   background-image: linear-gradient(
       rgba(183, 248, 219, 0.52),
@@ -24,7 +24,7 @@ body {
   margin: 0 auto;
 }
 
-.hero-text {
+.main-text {
   width: 450px;
   position: absolute;
   bottom: 40px;
@@ -32,23 +32,23 @@ body {
   text-align: right;
 }
 
-.hero-welcome-text {
+.welcome-text {
   margin: 0;
   padding: 0;
   font-size: 34px;
   margin-bottom: -10px;
 }
 
-.hero-country {
+.welcome-acebook {
   font-size: 100px;
   margin: 0;
   padding: 0;
 }
 
-.hero-text-description {
+.acebook-description {
   margin: 0;
   padding-bottom: 20px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .explore-btn {
