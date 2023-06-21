@@ -14,8 +14,6 @@ describe('User Sign Up - Already Used Account', () => {
         cy.get("#password").type(validPassword);
         cy.get("#submit-signup-button").click();
 
-        // This section is needed for when running the test solo - not needed when running as part of the test suite 
-
         // Assert that the user stays on the signup page
         cy.url().should('include', '/sessions/login');
 
