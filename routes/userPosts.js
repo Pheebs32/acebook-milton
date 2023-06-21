@@ -1,11 +1,8 @@
-const express = require("express");
-const router = express.Router();
+// const express = require("express");
+// const router = express.Router();
 
-const UserPostsController = require("../controllers/userPosts");
+// const UserPostsController = require("../controllers/userPosts");
 
-router.post("/", UserPostsController.Create); 
-router.get("/:username/posts/:postId/edit", UserPostsController.EditPost); 
-router.post("/:username/posts/:postId/edit", UserPostsController.UpdatePost);
+// router.post("/", UserPostsController.Create); 
 
-
-module.exports = router;
+// module.exports = router;
