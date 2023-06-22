@@ -1,41 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: whitesmoke;
-  }
-  
-  a {
-    color: #00B7FF;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 5%;
-    align-items: center;
-    background-color: #006d77;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    display: inline-block;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    color: #ffddd2;
-    padding: 8px 30px;
-    border-radius: 7px;
-    transition: all .3s ease;
-  }
-  
-  ul li a:hover,
-  ul li a.active {
-    color: #ffddd2;
-    background: #83c5be;
-  }
-  
-  
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-image: linear-gradient(
+    rgba(183, 248, 219, 0.52),
+    rgba(80, 167, 194, 0.73)
+  ),
+  url("/images/timeline-pic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #00b7ff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5%;
+  align-items: center;
+  background-color: #006d77;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ffddd2;
+  padding: 8px 30px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #ffddd2;
+  background: #83c5be;
+}
+
+/* .timeline-title {
+  color: blue;
+  position: fixed;
+  top: 350px
+} */
+
+.wrapper-posts {
+  width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+
+.wrapper-posts .posts {
+  font-size: 15px;
+  font-weight: 60;
+  /* text-align: center; */
+  padding-left: 15px;
+  line-height: 15px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px;
+  background: radial-gradient(
+    circle at 7.1% 15.6%,
+    rgb(22, 160, 133) 0%,
+    rgb(64, 240, 206) 100.3%
+  );
+}
+
+.wrapper-posts .posts .field li {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 10px;
+  position: relative;
+}
+
+.wrapper-posts #likes-from {
+  padding: 10px 30px 50px 30px;
+}
+
+form input[type="submit"]:active {
+  transform: scale(0.95);
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 40px #ffd900;
+  background: #ffd900;
+}
