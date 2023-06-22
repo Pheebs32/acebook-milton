@@ -53,6 +53,12 @@ body {
   );
 }
 
+.wrapper .title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .wrapper form {
   padding: 10px 30px 50px 30px;
 }

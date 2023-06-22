@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.main-section {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(183, 248, 219, 0.52),
+      rgba(80, 167, 194, 0.73)
+    ),
+    url("https://images.hdqwalls.com/wallpapers/it-is-what-it-is-7q.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-text {
+  width: 450px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  text-align: right;
+}
+
+.welcome-text {
+  margin: 0;
+  padding: 0;
+  font-size: 34px;
+  margin-bottom: -10px;
+}
+
+.welcome-acebook {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.acebook-description {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.explore-btn {
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 30px #ffc500;
+  background: #eec500;
+  padding: 12px 30px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.explore-btn:hover {
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 40px #ffd900;
+  background: #ffd900;
+}
