@@ -18,12 +18,18 @@ describe("Timeline", () => {
 
     // submit a post
     cy.visit("/posts");
-    cy.visit("/users/user1");
-    //cy.get("#content").click();
-    cy.get('textarea[name="content"]').type("Profile Post Test");
-    //cy.get("#textarea").type("Profile Post Test");
-    cy.get('button[type="submit"]').click()
+    cy.contains("New post").click();
 
-    cy.get(".posts").should("eq", "Profile Post Test");
+    cy.get("#new-post-form").find('[type="text"]').type("Test1");
+    cy.get("#new-post-form").submit();
+
+    //got to profile page
+    cy.visit("/users/User1")
+    cy.contains("Edit").click();
+    cy.contains("Test1").click().type(" Edited");
+    cy.contains("Save").click();
+    cy.visit("/posts");
+    cy.contains("Test1 Edited");
+
   });
 });

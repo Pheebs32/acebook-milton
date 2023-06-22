@@ -15,16 +15,21 @@ describe("Timeline", () => {
       cy.get("#email").type("someone@example.com");
       cy.get("#password").type("Password1");
       cy.get("#submit-login-button").click();
+
     // submit a post
     cy.visit("/posts");
     cy.contains("New post").click();
 
-    //cy.get("#new-post-form").find('[type="text"]').type("");
+    cy.get("#new-post-form").find('[type="text"]').type("self like test");
     cy.get("#new-post-form").submit();
-    // check for error message, NOTE: this checks the entire page and as such will fail if this text is anywhere on the page. Potential area for refactoring
-    //cy.contains('post must be populated');
-    // tempory test to assert still on new post page
-    cy.url().should('eq', '/posts/new');
+
+    //clikc like
+    cy.get("#likes-form").submit()
+    cy.get(".posts").should("contain", "1 like");
+
+    //clikc like agin and like count decreases
+    cy.get("#likes-form").submit()
+    cy.get(".posts").should("contain", "0 likes");
 
       });
 });

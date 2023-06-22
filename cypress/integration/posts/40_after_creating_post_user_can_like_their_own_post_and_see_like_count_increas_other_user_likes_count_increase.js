@@ -44,7 +44,7 @@ describe("Timeline", () => {
     //clikc like
     cy.get("#likes-form").submit()
     // check amount of likes
-    cy.get(".posts").should("eq", "2 likes");
+    cy.get(".posts").should("contain", "2 likes");
 
       });
 });
