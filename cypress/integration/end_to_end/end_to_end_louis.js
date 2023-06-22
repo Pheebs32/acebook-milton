@@ -26,10 +26,10 @@ describe("End to end - louis", () => {
         cy.get("#submit-login-button").click();
 
         // check redirect to timeline
-        cy.get('h1').contains('Timeline')
+        cy.get('h1').contains('Posts Timeline')
 
         // navigate to the new post page by clicking the link
-        cy.contains("New post").click();
+        cy.contains('a', 'Create New Post').click();
 
         // fill in the information
         cy.get("#new-post-form").find('[type="text"]').type("The Earth is a very small stage in a vast cosmic arena. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner.");
