@@ -1,7 +1,9 @@
 <head>
   <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/postedit.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/edit.css" />
 </head>
+
 
 <h1>Edit Post</h1>
 
@@ -12,9 +14,9 @@
       <li class="content">Post Content: {{post.message}}</li>
       <br>
 
-<h2 class="Edit-question">What would you like to do with the post?</h2>
-<br>
-
+{{!-- <h2 class="Edit-question">What would you like to do with the post?</h2>
+<br> --}}
+<div class="wrapper">
 <form action="/posts/{{post._id}}" method="POST">
   <label for="content">Edit Post:</label>
   <textarea id="content" name="content">{{post.message}}</textarea>
@@ -24,7 +26,9 @@
 <br>
 
 <form action="/posts/{{post._id}}/delete" method="POST">
-  <label for="content">Delete Post:</label>
+  <label for="content"></label>
   {{!-- <textarea id="content" name="content">{{post.message}}</textarea> --}}
   <button type="submit">Delete Post</button>
 </form>
+
+
