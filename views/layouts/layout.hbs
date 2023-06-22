@@ -1,25 +1,29 @@
-<!DOCTYPE html>
 <html>
   {{!-- <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head> --}}
-  {{!-- doesn't work :( vvv --}}
-  <link rel="shortcut icon" type="image/jpg" href="/public/images/acebook-logo.jpg"/>
+  <head>
+  {{! doesn't work :( vvv }}
+  <link
+    rel="shortcut icon"
+    type="image/jpg"
+    href="/public/images/acebook-logo.jpg"
+  />
+  </head>
   <body>
-
-<nav>
-<ul>
-    {{#if isAuthenticated}}
-        <li><a href="/posts">Posts</a></li>
-        <li><a href='/users/{{user.username}}'>Profile</a></li> 
-        <li><a href="/sessions/logout" >Logout</a></li> 
-    {{!-- {{else}}
+    <nav>
+      <ul>
+        {{#if isAuthenticated}}
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="/users/{{user.username}}">Profile</a></li>
+          <li><a href="/sessions/logout">Logout</a></li>
+          {{!-- {{else}}
         <li><a href="/sessions/login">Login</a></li>
         <li><a href="/users/signup">Sign-up</a></li> --}}
-    {{/if}}
-</ul>
-</nav>
+        {{/if}}
+      </ul>
+    </nav>
     {{{body}}}
   </body>
 </html>
