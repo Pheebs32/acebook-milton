@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="/stylesheets/postindex.css" />
 </head>
 
-{{!-- <h1 class="timeline-title">Posts Timeline</h1>  --}}
+<h1 class="timeline-title">Posts Timeline</h1> 
 
 <div class="wrapper-posts">
   {{#each posts}}
@@ -12,7 +12,6 @@
      
       <div class="field">
         <li class="date">Created at: {{{formatDate this}}}</li>
-        <br />
         <li class="username">Created By: {{{this.username}}}</li>
         <br />
         <li class="content">Post Content: {{{this.message}}}</li>
@@ -20,11 +19,13 @@
         <li class="likes">{{{this.like.length}}} {{{if_equal this}}}</li>
       </div>
 
-      <div class="field">
+
         <form id="likes-form" action="/posts/{{this._id}}/likes" method="post">
+          <div class="field">
           <input type="submit" value="like 👍" />
+          </div>
         </form>
-      </div>
+
 
     </ul>
     <br />
