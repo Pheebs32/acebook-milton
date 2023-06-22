@@ -3,22 +3,31 @@
   <link rel="stylesheet" href="/stylesheets/postnew.css" />
 </head>
 
-<h1>Create a New Post</h1>
+{{!-- <h1>Create a New Post</h1> --}}
 
 <div class="error-message">
     {{#if error}}
       {{error}}
     {{/if}}
 </div>
-<br>
 
-<form id="new-post-form" action="/posts" method="post">
-  <label for="message">Message: </label>
-  <input id="message" type="text" name="message" value="">
-  <input type="submit" value="Submit">
-</form>
+<div class="wrapper">
+  <div class="title">New Post ♤</div>
 
-<br>
-    <div class="cancel">
-      <a href="/posts">Cancel</a>
+  <form id="new-post-form" action="/posts" method="post">
+    <div class="label-message">
+      <label for="message">Please enter your post in the box below</label>
     </div>
+    <div class="field">
+      <input id="message" type="text" name="message" value="">
+      <input type="submit" value="Submit">
+    </div>
+    <div class="cancel">
+        <a href="/posts">Cancel</a>
+    </div>
+  </form>
+</div>
+
+    {{!-- <div class="cancel">
+      <a href="/posts">Cancel</a>
+    </div> --}}

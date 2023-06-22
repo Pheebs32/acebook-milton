@@ -1,41 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+html,
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: whitesmoke;
-  }
-  
-  a {
-    color: #00B7FF;
-  }
-  
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-image: linear-gradient(
+    rgba(183, 248, 219, 0.52),
+    rgba(80, 167, 194, 0.73)
+  ),
+  url("/images/newPost-pic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
   nav {
     display: flex;
     justify-content: space-between;
-    padding: 5px 5%;
-    align-items: center;
+    /* align-items: center; */
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     background-color: #006d77;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    display: inline-block;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    color: #ffddd2;
-    padding: 8px 30px;
-    border-radius: 7px;
-    transition: all .3s ease;
-  }
-  
-  ul li a:hover,
-  ul li a.active {
-    color: #ffddd2;
-    background: #83c5be;
-  }
-  
-  
+    };
+
+
+ul {
+  list-style: none;
+  align-items: center;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ffddd2;
+  padding: 8px 30px;
+  border-radius: 7px;
+  transition: all .3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #ffddd2;
+  background: #83c5be;
+}
+
+.login-username {
+  color: white;
+}
+
+
+.wrapper {
+  height: 300px;
+  width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  margin: 100px;
+}
+
+.wrapper .title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: radial-gradient(
+    circle at 7.1% 15.6%,
+    rgb(22, 160, 133) 0%,
+    rgb(64, 240, 206) 100.3%
+  );
+}
+
+.wrapper .title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper .form {
+  padding: 10px 30px 50px 30px;
+}
+
+.wrapper form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 75px;
+  position: relative;
+}
+
+.wrapper form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+form .field input:valid {
+  border-color: #4158d0;
+}
+
+
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+form .content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form .content input {
+  width: 15px;
+  height: 15px;
+  background: rgb(250, 250, 250);
+}
+
+form .content label {
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+
+.label-message {
+  text-align: center;
+}
+
+form .content {
+  color: "";
+}
+
+form .field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: radial-gradient(
+    circle at 7.1% 15.6%,
+    rgb(22, 160, 133) 0%,
+    rgb(64, 240, 206) 100.3%
+  );
+}
+
+form .field input[type="submit"]:active {
+  transform: scale(0.95);
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 40px #ffd900;
+  background: #ffd900;
+}
+
+form .cancel {
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+
+form a,
+form .cancel a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+form a:hover,
+form .cancel a:hover {
+  text-decoration: underline;
+}
+
