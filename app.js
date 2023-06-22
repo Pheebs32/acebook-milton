@@ -20,6 +20,11 @@ app.engine('.hbs', expressHbs.engine({ defaultLayout: 'layout', extname: '.hbs',
   allowProtoMethodsByDefault: true
 } }))
 
+app.engine('.hbs', expressHbs.engine({ defaultLayout: 'layout', extname: '.hbs',runtimeOptions: {
+  allowProtoPropertiesByDefault: true,
+  allowProtoMethodsByDefault: true
+} }))
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -32,6 +37,13 @@ hbs.handlebars.registerHelper('formatDate', function(posts) {
     return formattedDate;
 });
 
+hbs.handlebars.registerHelper('if_equal', function(posts) {
+  if (posts.like.length === 1) {
+  return "like";
+  } else {
+  return "likes";
+}
+});
 
 app.use(logger("dev"));
 app.use(express.json());
