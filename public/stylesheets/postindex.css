@@ -136,13 +136,13 @@ ul li a.active {
 }
 
 form .field input[type="submit"] {
-  color: #fff;
+  color: black;
   border: none;
   margin-top: 5px;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  background: red;
+  background: white;
   border-radius: 5px;
   padding: 4px;
 }
