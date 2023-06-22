@@ -20,6 +20,11 @@ app.engine('.hbs', expressHbs.engine({ defaultLayout: 'layout', extname: '.hbs',
   allowProtoMethodsByDefault: true
 } }))
 
+app.engine('.hbs', expressHbs.engine({ defaultLayout: 'layout', extname: '.hbs',runtimeOptions: {
+  allowProtoPropertiesByDefault: true,
+  allowProtoMethodsByDefault: true
+} }))
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");

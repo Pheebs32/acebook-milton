@@ -20,9 +20,16 @@ describe("Timeline", () => {
     cy.visit("/posts");
     cy.contains("New post").click();
 
-    cy.get("#new-post-form").find('[type="text"]').type("test");
+    cy.get("#new-post-form").find('[type="text"]').type("self like test");
     cy.get("#new-post-form").submit();
-    // check for error message, NOTE: this checks the entire page and as such will fail if this text is anywhere on the page. Potential area for refactoring
-    cy.contains('User1');
+
+    //clikc like
+    cy.get("#likes-form").submit()
+    cy.get(".posts").should("contain", "1 like");
+
+    //clikc like agin and like count decreases
+    cy.get("#likes-form").submit()
+    cy.get(".posts").should("contain", "0 likes");
+
       });
 });
