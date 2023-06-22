@@ -23,13 +23,31 @@ describe("Timeline", () => {
     cy.get("#new-post-form").find('[type="text"]').type("Test1");
     cy.get("#new-post-form").submit();
 
+    cy.visit("/posts");
+    cy.contains("New post").click();
+
+    cy.get("#new-post-form").find('[type="text"]').type("Test2");
+    cy.get("#new-post-form").submit();
+
+    cy.visit("/posts");
+    cy.contains("New post").click();
+
+    cy.get("#new-post-form").find('[type="text"]').type("Test3");
+    cy.get("#new-post-form").submit();
+
+
+    cy.get("li.content").eq(0).should("contain", "Test3");
+    cy.get("li.content").eq(1).should("contain", "Test2");
+    cy.get("li.content").eq(2).should("contain", "Test1");
+
     //got to profile page
+    
     cy.visit("/users/User1")
     cy.contains("Edit").click();
-    cy.get("textarea").contains("Test1").click().type(" Edited");
+    cy.get("textarea").contains("Test2").click().type(" Edited");
     cy.contains("Update Post").click();
     cy.visit("/posts");
-    cy.contains("Test1 Edited");
+    cy.get("li.content").eq(1).should("contain","Test2 Edited");
 
   });
 });
