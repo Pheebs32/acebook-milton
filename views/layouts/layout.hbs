@@ -1,16 +1,12 @@
-<html>
-  {{!-- <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head> --}}
-  <head>
-  {{! doesn't work :( vvv }}
-  <link
-    rel="shortcut icon"
-    type="image/jpg"
-    href="/images/acebook-logo.jpg"
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" type="image/jpg" href="/images/acebook-logo.jpg"
   />
-  </head>
+  <title>Acebook</title>
+</head>
+
   <body>
     <nav>
       <ul>
@@ -20,9 +16,6 @@
           <li><a href="/users/{{user.username}}">Profile</a></li>
           <li><a href="/sessions/logout">Logout</a></li>
           <li class="login-username">Logged in as: {{{user.username}}}</li>
-          {{!-- {{else}}
-        <li><a href="/sessions/login">Login</a></li>
-        <li><a href="/users/signup">Sign-up</a></li> --}}
         {{/if}}
       </ul>
     </nav>
