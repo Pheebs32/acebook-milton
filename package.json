@@ -15,7 +15,8 @@
     "test:login_and_out": "cypress run --spec 'cypress/integration/login_and_out/*'",
     "test:posts": "cypress run --spec 'cypress/integration/posts/*'",
     "test:sign_up": "cypress run --spec 'cypress/integration/sign_up/*'",
-    "test:entry_point": "cypress run --spec 'cypress/integration/entry_point/*'"
+    "test:entry_point": "cypress run --spec 'cypress/integration/entry_point/*'",
+    "test:end_to_end": "cypress run --spec 'cypress/integration/end_to_end/*'"
   },
   "engines": {
     "node": ">=18.1.0"
