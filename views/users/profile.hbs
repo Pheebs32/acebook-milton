@@ -1,32 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
   <link rel="stylesheet" href="/stylesheets/usersprofile.css" />
 </head>
 
-<h1>Profile Page</h1>
-<p>Username: {{ user.username }}</p>
-<p>Email: {{ user.email }}</p>
 
+ <!-- hero banner -->
+<div class="hero-banner"></div>
 
-{{!-- <div class="deletion-message">
-    {{#if req.params.deleted}}
-      {{"successfully deleted"}}
-    {{/if}}
-</div> --}}
-<br>
+ <!-- Profile Pic -->
+  <div class="avatar">
+  </div>
 
-{{!-- add all other profile information needed above--}}
+ <!-- User Info -->
+<section class="user-profile">
+<div class="container">
+    <h1 class="profile-title">Profile Page</h1>
+        <p class="profile-username">Username: {{ user.username }}</p>
+      <p class="profile-email">Email: {{ user.email }}</p>
+</section>
 
-{{!-- <h2>Create Post</h2>
-<form action="/users/{{ user.username }}/posts" method="POST"> 
-  <textarea name="content" rows="4" cols="50"></textarea>
-  <button type="submit">Post</button>
-</form> --}}
-
-{{!-- <a class="new-post-link" href="/posts/new">New post</a> --}}
-
-<h2>Posts:</h2>
-<ul>
+ <!-- Post Info -->
+<section class="posts-profile">
+  <div class="container">
+    <h1 class="post-title">Posts:</h1>
+      <ul class="post-list">
   {{#each posts}}
   <br>
     <li class="date">Created at: {{formatDate this}}</li>
@@ -42,5 +43,5 @@
   {{/each}}
   <br>
 </ul>
-
-{{!-- mabye can display all current posts made by users under create posts --}}
+  </div>
+</section>
