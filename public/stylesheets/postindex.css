@@ -56,30 +56,13 @@ ul li a.active {
   background: #83c5be;
 }
 
-/* .timeline-title {
-  color: blue;
-  position: fixed;
-  top: 350px
-} */
-
-/* .wrapper-posts {
-  width: 400px;
-  border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  margin: 50px;
-  font-size: 15px;
-  font-weight: 60;
-  padding-left: 15px;
-  line-height: 15px;
-  color: #fff;
-  user-select: none;
-  border-radius: 15px;
-  background: radial-gradient(
-    circle at 7.1% 15.6%,
-    rgb(22, 160, 133) 0%,
-    rgb(64, 240, 206) 100.3%
-  );
-} */
+.timeline-title {
+  color: teal;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
 .wrapper-posts {
   max-width: 800px;
